@@ -1,0 +1,99 @@
+
+.welcome-card {
+  right: 0px;
+}
+
+.time-card {
+  background-color: transparent!important;
+  margin: 0px 0 15px 0 !important;
+  width: 35%!important;
+  box-shadow: none !important;
+  padding-left: 0px !important;
+}
+
+.widget {
+  background-color: #3c4043b3;
+  width: 50%;
+  margin: 3%;
+  position: absolute;
+  box-shadow: 20px 20px 30px #808080a8;
+  border-radius: 10px;
+  bottom: 0;
+   h2 {
+    font-size: 35px;
+    padding: 1%;
+   }
+   h1 {
+     font-size: 50px;
+   }
+}
+.app-title {
+    position: absolute;
+    color: white;
+    font: bold 34px 'open sans';
+    top: 18%;
+    left: 37%;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  .welcome {
+    color: white;
+  }
+  
+  .splash-container {
+    background-color: #101010;
+    padding-top: 25px;
+  }
+  
+  .center {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    width: 10%;
+  }
+  
+  .quiz-text {
+    padding-top: 45px;
+    text-align: center;
+    color: white;
+    font: bold 34px 'open sans';
+  }
+
+  .shine {
+    background: #f6f7f8;
+    background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 225px;
+    display: inline-block;
+    position: relative;
+  
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeholderShimmer;
+    -webkit-animation-timing-function: linear;
+  }
+  
+  @-webkit-keyframes placeholderShimmer {
+    0% {
+      background-position: -468px 0;
+    }
+  
+    100% {
+      background-position: 468px 0;
+    }
+  }
+  
+  .box {
+    height: 300px;
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

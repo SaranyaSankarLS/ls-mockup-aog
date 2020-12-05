@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+     margin: 0; 
+     font-family: 'Open Sans', sans-serif;
+     background-color: #ffffff;
+ }
+ .canvas-container {
+     height: 100%;
+ }
+ .bottom-button {
+    padding: 20% 20% 0 20%;
+  }
+// body {
+//     background-image: url(assets/home_bg.jpg);
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.header-text {
+    color: white;
+    text-align: center;  
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 20px;
+}
+
+.mat-raised-button {
+    min-width: 300px;
+    height: 60px;
+    font-size: 20px;
+}
+.mat-slide-toggle {
+    padding: 5%;
+}
+
+.mat-slide-toggle-content {
+    font-size: 30px;
+}
+app-service-list {
+    .mat-chip-list-wrapper .mat-standard-chip {
+        margin: 0px -25px 0px 0px !important;
+        font-size: 30px;
+        height: 80px;
+        width: 350px;
+        background-color: #f1f3f4;
+        color: #9AA0A6;
+        display: grid;
+    }
+}
+app-welcome {
+    .mat-chip-list-wrapper .mat-standard-chip {
+        margin-left: 10% !important;
+        font-size: 30px;
+        height: 80px;
+        width: 200px;
+        padding-left: 12%;
+    }
+}
+
+.mat-chip-list-wrapper {
+    flex-wrap: nowrap !important;
+}

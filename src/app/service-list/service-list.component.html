@@ -1,0 +1,50 @@
+<div fxLayout="column"></div>
+<!-- <h1 *ngIf="!existingUser" class="font-weight-bold" style="color: black">
+  Hi Welcome
+</h1>
+<h1 *ngIf="existingUser" class="font-weight-bold" style="color: black">
+  Welcome back
+</h1> -->
+<h2 class="title-message">
+  Please select your choice of service.. or Tell me any specific service you
+  want now..
+</h2>
+<div class="scrolling-wrapper-flexbox" style="height: 400px" >
+    <div *ngFor="let category of categories">
+      <div class="card card-outline">
+        <div [hidden]="!imageLoader" class="box shine"></div>
+        <img [hidden]="imageLoader" (load)="this.imageLoader = false;" src={{category.url}} class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{category.name}}</h5>
+          <button class="btn btn-warning" (click)="optionSelect(category.name)">Select</button>
+        </div>
+      </div>
+    </div>
+    <!-- <mat-chip-list>
+      <mat-chip *ngFor="let chip of chips" [selected]="chip.state" (selectionChange)="changeSelected(chip.name)" (click)="chip.state=!chip.state">{{chip.name}}</mat-chip>
+    </mat-chip-list> -->
+  </div>
+<span class="title-message">Quick Suggestions</span>
+<drag-scroll #nav>
+  <mat-chip-list>
+    <mat-chip  drag-scroll-item *ngFor="let chip of chips" [selected]="chip.state" (selectionChange)="changeSelected(chip.name)" (click)="chip.state=!chip.state">{{'\"'+ chip.name +'\"'}}</mat-chip>
+  </mat-chip-list>
+</drag-scroll>
+<div fxLayout="row" fxLayoutAlign="space-around center" class="bottom-button">
+  <button mat-raised-button (click)="moveLeft()">Left</button>
+  <button mat-raised-button (click)="moveRight()">Right</button>
+  <button mat-raised-button (click)="moveTo(2)">Last</button>
+</div>
+  <div class="container-weather">
+    <div class="background-weather">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="content">
+            <h1 class="condition"><i class="material-icons sun">wb_sunny</i> Sunny</h1>
+            <h1 class="temp">{{temperatureObject.current.temp_f}}<span id="F">&#8457;</span></h1>
+            <h1 class="time">09:35</h1>
+            <h1 class="location"><i class="material-icons locationIcon">place</i> {{temperatureObject.location.region}}/ {{temperatureObject.location.country}}</h1>
+        </div>
+    </div>
+</div>

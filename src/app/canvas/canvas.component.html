@@ -1,0 +1,32 @@
+<div [ngSwitch]="currentScreen" class="canvas-container"
+  [ngClass]="currentScreen === screenType.Welcome ? 'welcome-div': 'common-div'">
+  <app-loading #loadingComponent *ngSwitchDefault></app-loading>
+  <app-loading #loadingComponent *ngSwitchCase="screenType.Loading"></app-loading>
+  <app-welcome #welcomeComponent *ngSwitchCase="screenType.Welcome" (selectedOption)="optionSelect($event)"
+                                  [weatherObject]="weatherObject"></app-welcome>
+
+  <app-service-list #serviceListComponent *ngSwitchCase="screenType.ServiceMenu" [categories]="categoryList"
+    [existingUser]="existingUser" [temperatureObject]="temperatureObject" [weatherObject]="weatherObject" (selectedOption)="optionSelect($event)">
+  </app-service-list>
+
+  <app-light-adjustment-screen #lightAdjustmentComponent *ngSwitchCase="screenType.LightAdjustment"
+    [lightData]="lightData" (selectedOption)="lightOptionSelect($event)"></app-light-adjustment-screen>
+
+  <app-ac-adjustment-screen #acAdjustmentComponent *ngSwitchCase="screenType.ACAdjustment" [acData]="acData"
+    (selectedOption)="optionSelect($event)"></app-ac-adjustment-screen>
+
+  <app-curtain-adjustment-screen #curtainAdjustmentComponent *ngSwitchCase="screenType.CurtainAdjustment"
+    [curtainData]="curtainData" (selectedOption)="optionSelect($event)"></app-curtain-adjustment-screen>
+
+  <app-default #defaultComponent *ngSwitchCase="screenType.Default"></app-default>
+
+  <div *ngSwitchCase="screenType.CheckOut">
+    <h1 class="header-text">Started checkout..</h1>
+  </div>
+  <div *ngSwitchCase="screenType.RoomDeviceManagement">
+    <h1 class="header-text">Device list..</h1>
+  </div>
+  <div *ngSwitchCase="screenType.OrderFood">
+    <h1 class="header-text">Food menu</h1>
+  </div>
+</div>

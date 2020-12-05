@@ -1,0 +1,34 @@
+<div class="ac-container">
+    <h1 class="font-weight-bold" style="color: black">AC Adjustment screen</h1>
+    <h2>Living AC status </h2>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap='10px'>
+        <mat-slide-toggle mat-raised-button
+                              (change)="onToggleChange($event.checked)">
+                AC is {{toggleValue}}
+            </mat-slide-toggle>
+        <div class="chip">
+            <img src="./assets/ac_icon.webp" alt="Person" width="96" height="96">Current AC Temperature : 23</div>
+    </div>
+
+    <div class="frame">
+        <div id="slider" class="rslider"></div>
+        <div class="thermostat">
+            <div class="ring">
+                <div class="bottom_overlay"></div>
+            </div>
+            <div class="control">
+                <div class="temp_outside">23°</div>
+                <div class="temp_room"><span>°</span></div>
+                <div class="room">Bedroom</div>
+            </div>
+        </div>
+        <div class="instructions">
+            <h4>Drag the handle, click at the temp you want, or directly type your number in <i class="fas fa-heart"></i></h4>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-around center" class="bottom-button">
+        <button mat-raised-button  (click)="onSaveButtonClicked()">Save</button>
+        <button mat-raised-button (click)="onGetAnotherServiceClicked()">Get another service</button>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="spalsh-container">
+    <div [hidden]="!imageLoader" class="box shine"></div>
+    <img [hidden]="!imageLoader" (load)="this.imageLoader = false" src="../../assets/assistant_icon.gif"
+        class="center img-fluid" />
+    <h1 class="quiz-text header-text app-title">Google Hospitality with LS</h1>
+</div>
+<mat-card class="widget welcome-card">
+    <h2 class="quiz-text header-text">Would you like to
+        have my assistance?</h2>  
+        <mat-chip-list>
+            <mat-chip   *ngFor="let chip of chips" [selected]="chip.state" (selectionChange)="changeSelected(chip.name)" (click)="chip.state=!chip.state">{{chip.name}}</mat-chip>
+          </mat-chip-list>  
+</mat-card>
+<mat-card class="widget time-card" fxLayout="row" fxLayoutAlign="space-between center">
+    <h1 class="quiz-text header-text">{{currentTime}}</h1> 
+    <div class="header-text">{{currentTemperature}}<span id="F">&#8457;</span></div>    
+</mat-card>

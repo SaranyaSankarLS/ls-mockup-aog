@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Order Food",
+        "url": "../../assets/food_order.jpg"
+    },{
+        "name": "Room device management",
+        "url": "../../assets/VoiceAssistant.jpg"
+    },
+    {
+        "name": "Checkin/Checkout",
+        "url": "../../assets/checkin_checkout.jpg"
+    }
+]

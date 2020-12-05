@@ -1,0 +1,216 @@
+.card-outline {
+    // min-height: 300px;
+    // min-width: 300px;
+    margin-right: 60px!important;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    border-radius: 10px;
+    width: 250px;
+    height: 290px;
+  }
+
+  .card-img-top {
+    height: 140px;
+  }
+  
+  .scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-left: 5%;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
+  
+  .card {
+    border: 2px;
+    // width: 150px;
+    // height: 350px;
+  }
+  
+  .card-title { 
+    font-size: 1.25rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+  .scrolling-wrapper-flexbox {
+    height: 80px;
+    margin-bottom: 20px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  
+  .shine {
+    background: #f6f7f8;
+    background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 225px;
+    display: inline-block;
+    position: relative;
+  
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeholderShimmer;
+    -webkit-animation-timing-function: linear;
+    }
+  
+    @-webkit-keyframes placeholderShimmer {
+      0% {
+        background-position: -468px 0;
+      }
+  
+      100% {
+        background-position: 468px 0;
+      }
+    }
+  
+    .box {
+      height: 225px;
+      width: 300px;
+    }
+    .card-body {
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .title-message {
+      font-size: 25px;
+      color: #0a7057;
+      font-weight: 580!important;
+      text-align: center;
+    }
+    ////////////////////////////////////////////////////////
+    .container-weather{
+      overflow: hidden;
+      z-index: 10;
+      position: relative;
+      margin: auto;
+      height: 200px;
+      width: 50%;
+      background-color: #1d91d9;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+  }
+  
+  
+  /*  BACKGROUND  */
+  
+  .circle1{
+      z-index: 100;
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      right: -20px;
+      top: -30px;
+      border-radius: 50%;
+      background-color: dodgerblue;
+      animation: enlarge;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+  }
+  
+  .circle2{
+      z-index: 80;
+      position: absolute;
+      height: 150px;
+      width: 150px;
+      right: -50px;
+      top: -70px;
+      border-radius: 50%;
+      background-color:#3583ce;
+      
+      animation: enlarge;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+  }
+  
+  .circle3{
+      z-index: 50;
+      position: absolute;
+      height: 200px;
+      width: 200px;
+      right: -50px;
+      top: -100px;
+      border-radius: 50%;
+      background-color: #1066ba;
+      
+      animation: enlarge;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+  }
+  
+  
+  
+  /*  CONTENT  */
+  
+  .sun{
+      z-index: 1000;
+      font-size: 35px!important;
+      color: white;
+  }
+  
+  .condition{
+      z-index: 1000;
+      position: absolute;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 30px;
+      left: 20px;  
+      top: 10px;
+  }
+  
+  .temp{
+      z-index: 1000;
+      position: absolute;
+      font-family: "Roboto", sans-serif;
+      font-size: 35px;
+      font-weight: 500;
+      left: 20px;
+      bottom: 5px;
+  }
+  
+  #F{
+      z-index: 1000;
+      font-family: "Roboto",sans-serif;
+      font-weight: 500;
+      font-size: 30px;
+  }
+  
+  
+  .time{
+      z-index: 1000;
+      position: absolute;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 30px;
+      font-weight: 500;
+      right: 20px;
+      top: 10px;
+  }
+  
+  .locationIcon{
+      z-index: 1000;
+      font-size: 25px !important;
+  }
+  
+  .location{
+      z-index: 1000;
+      position: absolute;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 30px;
+      font-weight: 200;
+      right: 20px;
+      bottom: 15px;
+  }
+  
+  @keyframes enlarge{
+      50%{
+          transform: scale(1.2);
+      }
+  }

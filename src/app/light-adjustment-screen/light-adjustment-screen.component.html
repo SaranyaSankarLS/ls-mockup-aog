@@ -1,0 +1,29 @@
+<div fxLayout="column"> 
+  <h1 class="header-text">Light Adjustment screen</h1>
+    <h2 class=" header-text-light">Living Ceiling Light </h2>
+    <div class="flex-row">
+        <mat-slide-toggle mat-raised-button
+        (change)="onToggleChange($event.checked)">
+Light is {{toggleValue}}
+</mat-slide-toggle>
+        <div class="chip">
+            <img src="../../assets/light.webp" alt="Person" width="96" height="96">Current brightness : 23%</div>
+    </div>
+
+    <div class="assessment-block">
+        <div class="round-slider">
+        <!-- 	<div class="selection-button"></div> -->
+            <div class="selection">
+            </div>
+            <div class="holder">
+                <span class="holder-text">0</span>
+            </div>
+        </div>
+        <div class="assessment-title">Set Brightness</div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-around center" class="bottom-button">
+        <button mat-raised-button class="assessment-button" (click)="onSaveButtonClicked()">Save</button>
+        <button mat-raised-button class="assessment-button" (click)="onGetAnotherServiceClicked()">Get another service</button>
+    </div>
+</div>
